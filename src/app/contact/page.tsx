@@ -1,8 +1,4 @@
-"use client";
-
 import type React from "react";
-
-import { useState } from "react";
 import { Mail, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,32 +10,15 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Contact Us - Techinsiders",
+	description:
+		"Get in touch with Techinsiders for support, feedback, or inquiries.",
+};
 
 export default function ContactPage() {
-	const [formData, setFormData] = useState({
-		name: "",
-		email: "",
-		subject: "",
-		message: "",
-	});
-
-	const handleSubmit = (e: React.FormEvent) => {
-		e.preventDefault();
-		// Handle form submission here
-		console.log("Form submitted:", formData);
-		alert("Thank you for your message! We'll get back to you soon.");
-		setFormData({ name: "", email: "", subject: "", message: "" });
-	};
-
-	const handleChange = (
-		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-	) => {
-		setFormData({
-			...formData,
-			[e.target.name]: e.target.value,
-		});
-	};
-
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-12'>
 			<div className='container mx-auto px-4 max-w-4xl'>
@@ -67,9 +46,7 @@ export default function ContactPage() {
 								</CardDescription>
 							</CardHeader>
 							<CardContent>
-								<form
-									onSubmit={handleSubmit}
-									className='space-y-6'>
+								<form className='space-y-6'>
 									<div className='grid md:grid-cols-2 gap-4'>
 										<div>
 											<label
@@ -82,8 +59,6 @@ export default function ContactPage() {
 												name='name'
 												type='text'
 												required
-												value={formData.name}
-												onChange={handleChange}
 												placeholder='Your full name'
 											/>
 										</div>
@@ -98,8 +73,6 @@ export default function ContactPage() {
 												name='email'
 												type='email'
 												required
-												value={formData.email}
-												onChange={handleChange}
 												placeholder='your.email@example.com'
 											/>
 										</div>
@@ -116,8 +89,6 @@ export default function ContactPage() {
 											name='subject'
 											type='text'
 											required
-											value={formData.subject}
-											onChange={handleChange}
 											placeholder="What's this about?"
 										/>
 									</div>
@@ -132,8 +103,6 @@ export default function ContactPage() {
 											id='message'
 											name='message'
 											required
-											value={formData.message}
-											onChange={handleChange}
 											placeholder='Tell us more about your inquiry...'
 											className='min-h-[120px]'
 										/>
@@ -159,18 +128,19 @@ export default function ContactPage() {
 								</CardDescription>
 							</CardHeader>
 							<CardContent className='space-y-4'>
-								<div className="flex items-center gap-3 sm:gap-4 md:gap-5 flex-wrap">
-									<div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
-										<Mail className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+								<div className='flex items-center gap-3'>
+									<div className='w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center'>
+										<Mail className='w-5 h-5 text-white' />
 									</div>
-									<div className="flex flex-col">
-										<p className="font-medium text-gray-800 text-base sm:text-lg">Email</p>
-										<p className="text-gray-600 text-sm sm:text-base break-all">
+									<div>
+										<p className='font-medium text-gray-800'>
+											Email
+										</p>
+										<p className='text-gray-600 text-sm'>
 											techinsiderstech@gmail.com
 										</p>
 									</div>
 								</div>
-
 
 								<div className='flex items-center gap-3'>
 									<div className='w-10 h-10 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center'>

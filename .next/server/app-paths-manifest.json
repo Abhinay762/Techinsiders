@@ -1,12 +1,5 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/contact/page": "app/contact/page.js",
   "/page": "app/page.js",
-  "/privacy-policy/page": "app/privacy-policy/page.js",
-  "/tools/keyword-suggestion/page": "app/tools/keyword-suggestion/page.js",
-  "/tools/word-count/page": "app/tools/word-count/page.js",
-  "/about/page": "app/about/page.js",
-  "/disclaimer/page": "app/disclaimer/page.js",
-  "/terms-of-service/page": "app/terms-of-service/page.js"
+  "/contact/page": "app/contact/page.js"
 }

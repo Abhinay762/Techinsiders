@@ -1,12 +1,12 @@
 {
   "/_not-found/page": "/_not-found",
   "/favicon.ico/route": "/favicon.ico",
-  "/contact/page": "/contact",
   "/page": "/",
   "/privacy-policy/page": "/privacy-policy",
   "/tools/keyword-suggestion/page": "/tools/keyword-suggestion",
   "/tools/word-count/page": "/tools/word-count",
   "/about/page": "/about",
+  "/contact/page": "/contact",
   "/disclaimer/page": "/disclaimer",
   "/terms-of-service/page": "/terms-of-service"
 }
