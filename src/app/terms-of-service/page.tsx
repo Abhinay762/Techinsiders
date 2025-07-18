@@ -1,5 +1,10 @@
 import { FileText, Users, Shield, AlertTriangle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+export const metadata = {
+	title: "Terms & Conditions | TechInsiders",
+	description: "Review the terms and conditions for using TechInsiders. By accessing our site, you agree to our policies and guidelines.",
+};
+
 
 export default function TermsOfServicePage() {
 	return (
@@ -354,7 +359,7 @@ export default function TermsOfServicePage() {
 								<p>
 									<strong>Address:</strong> Pune , India
 								</p>
-								
+
 							</div>
 						</CardContent>
 					</Card>

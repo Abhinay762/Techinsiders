@@ -1,5 +1,10 @@
 import { AlertTriangle, Info, Shield, FileText } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+export const metadata = {
+	title: "Disclaimer | TechInsiders",
+	description: "Read the disclaimer for TechInsiders. Understand the terms of use and limitations of liability when using our site and tools.",
+};
+
 
 export default function DisclaimerPage() {
 	return (
